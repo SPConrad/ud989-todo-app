@@ -1,6 +1,7 @@
 /*global Backbone */
 var app = app || {};
 
+///this is an "IIFE", immediately invoked function expression
 (function () {
 	'use strict';
 

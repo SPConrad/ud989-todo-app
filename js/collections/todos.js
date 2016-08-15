@@ -1,6 +1,10 @@
 /*global Backbone */
+///if app does not exist, set it to be an empty object
+
 var app = app || {};
 
+
+///this is an "IIFE", immediately invoked function expression
 (function () {
 	'use strict';
 
@@ -39,3 +43,5 @@ var app = app || {};
 	// Create our global collection of **Todos**.
 	app.todos = new Todos();
 })();
+///the () at the end causes the anonymous function to immediately be called and run
+
