@@ -19,6 +19,7 @@ var app = app || {};
 		events: {
 			'click .toggle': 'toggleCompleted',
 			'dblclick label': 'edit',
+			'click .priority-btn': 'prioritize',
 			'click .edit-btn' : 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
@@ -70,6 +71,18 @@ var app = app || {};
 		toggleCompleted: function () {
 			console.log(localStorage);
 			this.model.toggle();
+		},
+		prioritize: function(){
+			//console.log(' ' + this.$el.className + ' ').indexOf(' ' + 'priority' + '' );
+			//console.log(this.$el.className);
+			if (this.$el[0].className== 'priority')
+			{
+				this.$el.removeClass('priority');
+			} else {
+				this.$el.addClass('priority');
+			}
+			//console.log(' ' + this.$el.className + ' ').indexOf(' ' + 'priority' + '' );
+
 		},
 
 		// Switch this view into `"editing"` mode, displaying the input field.
